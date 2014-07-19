@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            #breakGroup button {
+                width: 100%;
+            }
+
+            #hitbtn {
+                font-family: 'Satisfy', cursive;
+                font-size: 5em;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="container-fluid">
+      <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>hit the brakes.</h1>
+            <h4>next break in 5 mins</h4>
+            <div id="breakGroup">
+                <p>
+                    <button type="button" class="btn btn-warning btn-lg" id="hitbtn"><h1>Hit it<h1></button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-primary btn-lg">Coffee</button>
+                </p><p>
+                    <button type="button" class="btn btn-primary btn-lg">Music</button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exercise">Exercise</button>
+                    <!-- Modal -->
+                </p>
+                <p>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#video">Video</button>
+                </p>
+            </div>
+        </div>
+    </div>
+        
+         <div class="modal fade" id="exercise" tabindex="-1" role="dialog" aria-labelledby="video" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Exercise</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox">
+                            <label>5 push-ups</label>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox">
+                            <label>Blink</label>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox">
+                            <label>Walk</label>
+                          </span>
+                        </div><!-- /input-group -->
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="music" tabindex="-2" role="dialog" aria-labelledby="video" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Music</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <iframe src="https://embed.spotify.com/?uri=spotify:track:4bz7uB4edifWKJXSDxwHcs" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+                        
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div>
+            </div>
+          </div>
+        </div>
+        
+         <div class="modal fade" id="video" tabindex="-2" role="dialog" aria-labelledby="video" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Exercise</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div id="videoEmbed">
+                            <iframe width="720" height="480"   src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div>
+            </div>
+          </div>
+        </div>
+    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+        <script>
+        $(document).ready(function(){
+         $.ajax({
+                url: 'http://freemusicarchive.org/api/get/curators.json?api_key=WYV85YV3YLZH435N&limit=10&page=3&sort_by=curator_date_created&sort_dir=desc',
+                dataType: 'jsonp',
+                success: function(data){
+                    console.log(data.dataset.track_id);
+                }
+            });
+        });
+        </script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
