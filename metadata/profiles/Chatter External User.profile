@@ -322,6 +322,10 @@
         <apexPage>MobileSample_jQueryMobile</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
+    <pageAccesses>
+        <apexPage>take_break</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <userLicense>Chatter External</userLicense>
     <userPermissions>
         <enabled>true</enabled>

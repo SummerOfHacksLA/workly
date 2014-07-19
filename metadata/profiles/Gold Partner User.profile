@@ -322,6 +322,10 @@
         <apexPage>MobileSample_jQueryMobile</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <pageAccesses>
+        <apexPage>take_break</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <tabVisibilities>
         <tab>BreakSettings__c</tab>
         <visibility>DefaultOn</visibility>
