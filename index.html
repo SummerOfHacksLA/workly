@@ -9,15 +9,20 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
-            button {
+            #breakGroup button {
                 width: 100%;
+            }
+
+            #hitbtn {
+                font-family: 'Satisfy', cursive;
+                font-size: 5em;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -32,26 +37,99 @@
 
     <div class="container-fluid">
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-6 col-md-offset-4">
-            <h1>workly.</h1>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>hit the brakes.</h1>
             <h4>next break in 5 mins</h4>
             <div id="breakGroup">
+                <p>
+                    <button type="button" class="btn btn-warning btn-lg" id="hitbtn"><h1>Hit it<h1></button>
+                </p>
                 <p>
                     <button type="button" class="btn btn-primary btn-lg">Coffee</button>
                 </p><p>
                     <button type="button" class="btn btn-primary btn-lg">Music</button>
                 </p>
                 <p>
-                    <button type="button" class="btn btn-primary btn-lg" disabled="disabled">Exercise</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exercise">Exercise</button>
+                    <!-- Modal -->
                 </p>
                 <p>
-                    <button type="button" class="btn btn-primary btn-lg">Video</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#video">Video</button>
                 </p>
             </div>
         </div>
-      </div>
-
+    </div>
+        
+         <div class="modal fade" id="exercise" tabindex="-1" role="dialog" aria-labelledby="video" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Exercise</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox">
+                            <label>5 push-ups</label>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox">
+                            <label>Blink</label>
+                          </span>
+                        </div><!-- /input-group -->
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="checkbox">
+                            <label>Walk</label>
+                          </span>
+                        </div><!-- /input-group -->
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="music" tabindex="-2" role="dialog" aria-labelledby="video" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Music</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <iframe src="https://embed.spotify.com/?uri=spotify:track:4bz7uB4edifWKJXSDxwHcs" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+                        
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div>
+            </div>
+          </div>
+        </div>
+        
+         <div class="modal fade" id="video" tabindex="-2" role="dialog" aria-labelledby="video" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Exercise</h4></div>
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div id="videoEmbed">
+                            <iframe width="720" height="480"   src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div>
+            </div>
+          </div>
+        </div>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
@@ -61,10 +139,37 @@
         <script>
         $(document).ready(function(){
             var breakGroup = $("#breakGroup");
+            var modals = [
+                '#exercise',
+                '#video',
+                '#music'
+                ];
             breakGroup.delegate( "button", "click", function() {
                 $(this).toggleClass("active");
+                if($(this).attr('id')=="hitbtn"){
+                    console.log('hitme');
+                     var modalIndex = Math.floor(Math.random() * modals.length);
+                    $(modals[modalIndex]).modal('toggle');
+                }
+
+                if(modals[modalIndex]=="#music"){
+                    
+                }
+                $('#music').on('hidden.bs.modal', function (e) {
+                    $("#music .player").each().addClass('music-paused');
+                })
+               
             });
             console.log($( "#breakGroup"));
+            var videoEmbed = $("#videoEmbed iframe");
+            var videos = [
+                'pRpvdcjkT3k',
+                'Te4wx4jtiEA',
+                'efTj6UYzvk4'
+            ];
+
+var index=Math.floor(Math.random() * videos.length);
+    videoEmbed.attr('src', 'http://www.youtube.com/embed/' + videos[index]);
         });
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
