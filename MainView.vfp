@@ -1,0 +1,67 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" extensions="vote" standardStylesheets="false" standardController="Lead" recordSetVar="leads">
+    <html>
+     <head>
+         
+          <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1, 
+                                      minimum-scale=1, maximum-scale=1, user-scalable=no"/> 
+          <apex:stylesheet value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                    'common/css/app.min.css')}"/>
+          <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                    'common/js/jQuery2.0.2.min.js')}"/>
+          <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                    'common/js/jquery.touchwipe.min.js')}"/>
+          <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
+                    'common/js/main.min.js')}"/>
+
+       </head>
+<body>
+<div class="app-wrapper">
+    <header>
+    <!--<div class="main-menu-button main-menu-button-left"><a class="left-arrow">&nbsp;</a></div>
+        <div class="main-menu-button main-menu-button-right"><a class="gear">&nbsp;</a></div>-->
+        <h1>Boolean App</h1>
+    </header>
+
+    <div class="app-content">
+        <apex:repeat value="{!leads}" var="l">
+            <div class="list-view-header"><apex:outputtext value="{!l.company}"></apex:outputtext></div>
+            <section>
+                <div class="content">
+                    <div class="span-66 settings settings-left">
+                       
+                    </div><!-- .span-50 -->
+                    <div class="span-33 settings settings-right">
+                        <div class="form-control-group">
+                            <div class="form-control form-control-toggle" data-on-label="on" data-off-label="off">
+                                <input type="checkbox" name="toggle" onChange="callClass({!l.id},true)"/>
+                            </div>
+                        </div>
+                    </div><!--.span-50-->
+                </div><!-- .content -->
+            </section>
+        </apex:repeat>
+    </div>
+</div>
+    
+    <script type="text/javascript">
+    function callClass(id,v){
+        console.log(id,v);
+        var voteVal = document.getElementById(v).val;
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.vote.employeeVote}',
+            id,true, 
+            function(result, event){
+                if (event.status) {
+                    console.log('YAY');
+                } else if (event.type === 'exception') {
+                    console.log('NAY');
+                } else {
+                }
+            },{escape: true}
+        );
+    }
+    </script>
+</body>
+</html>
+</apex:page>
