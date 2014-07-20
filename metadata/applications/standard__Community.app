@@ -11,4 +11,5 @@
     <tab>standard-Dashboard</tab>
     <tab>standard-Questions</tab>
     <tab>OurApp</tab>
+    <tab>BooleanApp__c</tab>
 </CustomApplication>

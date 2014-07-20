@@ -7,4 +7,5 @@
     <tab>standard-CollaborationGroup</tab>
     <tab>standard-File</tab>
     <tab>OurApp</tab>
+    <tab>BooleanApp__c</tab>
 </CustomApplication>

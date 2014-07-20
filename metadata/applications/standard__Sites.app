@@ -4,4 +4,5 @@
     <tab>standard-Chatter</tab>
     <tab>standard-Sites</tab>
     <tab>OurApp</tab>
+    <tab>BooleanApp__c</tab>
 </CustomApplication>

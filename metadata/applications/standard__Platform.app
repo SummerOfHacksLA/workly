@@ -7,4 +7,5 @@
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
     <tab>OurApp</tab>
+    <tab>BooleanApp__c</tab>
 </CustomApplication>

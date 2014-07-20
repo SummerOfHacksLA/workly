@@ -3,4 +3,5 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <tab>standard-AppLauncher</tab>
     <tab>OurApp</tab>
+    <tab>BooleanApp__c</tab>
 </CustomApplication>

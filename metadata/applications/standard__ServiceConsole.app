@@ -124,6 +124,7 @@
     <tab>standard-Lead</tab>
     <tab>standard-Knowledge</tab>
     <tab>OurApp</tab>
+    <tab>BooleanApp__c</tab>
     <workspaceMappings>
         <mapping>
             <tab>OurApp</tab>
@@ -142,6 +143,9 @@
         </mapping>
         <mapping>
             <tab>standard-Lead</tab>
+        </mapping>
+        <mapping>
+            <tab>BooleanApp__c</tab>
         </mapping>
         <mapping>
             <tab>standard-Knowledge</tab>

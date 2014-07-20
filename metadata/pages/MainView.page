@@ -1,4 +1,4 @@
-<apex:page docType="html-5.0" sidebar="false" extensions="vote" standardStylesheets="false" standardController="Lead" recordSetVar="leads">
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" extensions="vote" standardStylesheets="false" standardController="Lead" recordSetVar="leads">
     <html>
      <head>
          
@@ -13,10 +13,7 @@
                     'common/js/jquery.touchwipe.min.js')}"/>
           <apex:includeScript value="{!URLFOR($Resource.Mobile_Design_Templates, 
                     'common/js/main.min.js')}"/>
-         
-         <script>
-         j$ = jQuery.noConflict();
-         </script>
+
        </head>
 <body>
 <div class="app-wrapper">
@@ -37,7 +34,7 @@
                     <div class="span-33 settings settings-right">
                         <div class="form-control-group">
                             <div class="form-control form-control-toggle" data-on-label="on" data-off-label="off">
-                                <input id="check-{!l.id}" type="checkbox" name="toggle" onChange="callClass({!l.id},check-{!l.id})" />
+                                <input type="checkbox" name="toggle" onChange="callClass({!l.id},true)"/>
                             </div>
                         </div>
                     </div><!--.span-50-->
@@ -53,7 +50,7 @@
         var voteVal = document.getElementById(v).val;
         Visualforce.remoting.Manager.invokeAction(
             '{!$RemoteAction.vote.employeeVote}',
-            id,voteVal, 
+            id,true, 
             function(result, event){
                 if (event.status) {
                     console.log('YAY');

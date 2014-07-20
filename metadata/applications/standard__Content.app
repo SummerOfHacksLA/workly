@@ -7,4 +7,5 @@
     <tab>standard-ContentSubscriptions</tab>
     <tab>standard-ContentFavorites</tab>
     <tab>OurApp</tab>
+    <tab>BooleanApp__c</tab>
 </CustomApplication>
