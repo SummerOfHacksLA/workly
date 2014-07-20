@@ -1,0 +1,23 @@
+<apex:page controller="vote">
+    
+    <input id="check" type="checkbox" name="toggle" onChange="callClass(43,hey)"/>
+    <script type="text/javascript">
+    function callClass(id,v){
+        console.log(id,v);
+        var voteVal = document.getElementById(v).value();
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.vote.employeeVote}',
+            id,voteVal, 
+            function(result, event){
+                if (event.status) {
+                    console.log('YAY');
+                } else if (event.type === 'exception') {
+                    console.log('NAY');
+                } else {
+                }
+            },{escape: true}
+        );
+    }
+    </script>
+    
+</apex:page>
