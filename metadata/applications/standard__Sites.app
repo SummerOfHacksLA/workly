@@ -3,6 +3,4 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <tab>standard-Chatter</tab>
     <tab>standard-Sites</tab>
-    <tab>Test</tab>
-    <tab>BreakSettings__c</tab>
 </CustomApplication>

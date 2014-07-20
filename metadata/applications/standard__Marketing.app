@@ -8,6 +8,4 @@
     <tab>standard-Opportunity</tab>
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
-    <tab>Test</tab>
-    <tab>BreakSettings__c</tab>
 </CustomApplication>

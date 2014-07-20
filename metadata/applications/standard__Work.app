@@ -5,6 +5,8 @@
     <tab>standard-Chatter</tab>
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-Recognition</tab>
+    <tab>standard-WorkRewardFund</tab>
+    <tab>standard-WorkRewardFundType</tab>
     <tab>standard-Feedback</tab>
     <tab>standard-Coaching</tab>
     <tab>standard-Goal</tab>

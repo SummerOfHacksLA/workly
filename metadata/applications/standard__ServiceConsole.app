@@ -123,22 +123,14 @@
     <tab>standard-Opportunity</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Knowledge</tab>
-    <tab>Test</tab>
-    <tab>BreakSettings__c</tab>
     <workspaceMappings>
         <mapping>
             <fieldName>AccountId</fieldName>
             <tab>standard-Opportunity</tab>
         </mapping>
         <mapping>
-            <tab>Test</tab>
-        </mapping>
-        <mapping>
             <fieldName>AccountId</fieldName>
             <tab>standard-Case</tab>
-        </mapping>
-        <mapping>
-            <tab>BreakSettings__c</tab>
         </mapping>
         <mapping>
             <fieldName>AccountId</fieldName>

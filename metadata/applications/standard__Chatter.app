@@ -6,6 +6,4 @@
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-CollaborationGroup</tab>
     <tab>standard-File</tab>
-    <tab>Test</tab>
-    <tab>BreakSettings__c</tab>
 </CustomApplication>

@@ -10,6 +10,4 @@
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
     <tab>standard-Questions</tab>
-    <tab>Test</tab>
-    <tab>BreakSettings__c</tab>
 </CustomApplication>

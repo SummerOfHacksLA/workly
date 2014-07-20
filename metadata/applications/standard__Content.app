@@ -6,6 +6,4 @@
     <tab>standard-ContentSearch</tab>
     <tab>standard-ContentSubscriptions</tab>
     <tab>standard-ContentFavorites</tab>
-    <tab>Test</tab>
-    <tab>BreakSettings__c</tab>
 </CustomApplication>
