@@ -123,7 +123,11 @@
     <tab>standard-Opportunity</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Knowledge</tab>
+    <tab>OurApp</tab>
     <workspaceMappings>
+        <mapping>
+            <tab>OurApp</tab>
+        </mapping>
         <mapping>
             <fieldName>AccountId</fieldName>
             <tab>standard-Opportunity</tab>

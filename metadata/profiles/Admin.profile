@@ -277,9 +277,17 @@
         <layout>WorkPerformanceCycle-Performance Cycle Layout</layout>
     </layoutAssignments>
     <pageAccesses>
-        <apexPage>MobileView</apexPage>
+        <apexPage>MainView</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
+    <pageAccesses>
+        <apexPage>SplashPage</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <tabVisibilities>
+        <tab>OurApp</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
     <userPermissions>
         <enabled>true</enabled>
